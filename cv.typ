@@ -143,7 +143,7 @@
             let end = utils.strpdate(edu.endDate)
 
             let edu-items = ""
-            if edu.honors != none {edu-items = edu-items + "- *Honors*: " + edu.honors.join(", ") + "\n"}
+            if edu.honors != none {edu-items = edu-items + "- *Grade*: " + edu.honors.join(", ") + "\n"}
             if edu.courses != none {edu-items = edu-items + "- *Courses*: " + edu.courses.join(", ") + "\n"}
             if edu.highlights != none {
                 for hi in edu.highlights {
