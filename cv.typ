@@ -64,7 +64,7 @@
 #let addresstext(info, uservars) = {
     if uservars.showAddress {
         block(width: 100%)[
-            #info.personal.location.city, #info.personal.location.region, #info.personal.location.country #info.personal.location.postalCode
+            #info.personal.location.city, #info.personal.location.country
             #v(-4pt)
         ]
     } else {none}
@@ -74,9 +74,9 @@
     #let profiles = (
         box(link("mailto:" + info.personal.email)),
         if uservars.showNumber {box(link("tel:" + info.personal.phone))} else {none},
-        if info.personal.url != none {
+        if uservars.showWebsite and info.personal.url != none {
             box(link(info.personal.url)[#info.personal.url.split("//").at(1)])
-        }
+        } else { none }
     ).filter(it => it != none) // filter out none elements from the profile array
 
     #if info.personal.profiles.len() > 0 {
