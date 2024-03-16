@@ -289,7 +289,7 @@
                     *#pub.name* \
                 ]
                 // line 2: publisher and date
-                Published on #text(style: "italic")[#pub.publisher]  #h(1fr) #date \
+                Published in #text(style: "italic")[#pub.publisher]  #h(1fr) #date \
             ]
         }
     ]}
